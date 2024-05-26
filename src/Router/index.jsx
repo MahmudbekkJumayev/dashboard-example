@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
+        index: true, // Bu 'index' marshrutidir
+        element: <Home />,
+      },
+      {
         path: "/home",
         element: <Home />,
       },
