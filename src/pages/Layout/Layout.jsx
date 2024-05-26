@@ -11,7 +11,7 @@ const Layout = () => {
       </aside>
       <div className="flex-grow">
         <Navbar />
-        <main className="snap-y ml-[100px]">
+        <main className="snap-y md:ml-[70px] lg:ml-[70px] px-10">
           <Outlet />
         </main>
       </div>

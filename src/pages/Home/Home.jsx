@@ -10,202 +10,174 @@ import Circle from "../Circle/Circle";
 
 const Home = () => {
   return (
-    <div className="flex container mt-[80px] mb-[30px] gap-10">
-      {/* Main 1 container */}
-      <div className="flex flex-col justify-start gap-10">
-        {/* Performans */}
-        <div>
-          <h4 className="text-[30px] font-medium text-gray-500">Performance</h4>
-          <div className="w-[700px] h-[320px] bg-white rounded-md drop-shadow-md ">
-            <LineChart />
+    <div className="container mx-auto  mt-[80px]  mb-[30px] p-4 lg:p-0">
+      <div className="flex flex-col lg:flex-row gap-10">
+        {/* Main 1 container */}
+        <div className="flex flex-col gap-10 lg:w-2/3">
+          {/* Performance */}
+          <div>
+            <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
+              Performance
+            </h4>
+            <div className="w-[100%] h-[320px] bg-white rounded-md drop-shadow-md">
+              <LineChart />
+            </div>
+          </div>
+
+          {/* Session */}
+          <div className="mt-5 flex  sm:grid-cols-2 justify-between items-center gap-3">
+            {[sessionImg1, sessionImg2, sessionImg3, sessionImg4].map(
+              (img, index) => (
+                <div
+                  key={index}
+                  className="w-full sm:w-1/2 lg:w-[24%] bg-white rounded-md drop-shadow-md p-5 lg:p-10 flex flex-col items-center"
+                >
+                  <span className="bg-blue-100 rounded-md w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] flex justify-center items-center cursor-pointer">
+                    <img
+                      className="w-[20px] h-[20px] lg:w-[25px] lg:h-[25px]"
+                      src={img}
+                      alt="Users icons"
+                    />
+                  </span>
+                  <span className="flex flex-col gap-3 mt-2 items-center">
+                    <p className="text-[16px] lg:text-[20px] font-medium text-gray-500">
+                      {["Bounce Rate", "Users", "Sessions", "Duration"][index]}
+                    </p>
+                    <h5 className="text-[20px] lg:text-[25px] font-bold">
+                      {["26.3%", "72.6k", "26.3%", "2m 18s"][index]}
+                    </h5>
+                    <p className="text-[13px] lg:text-[15px]">
+                      {["-28%", "+25%", "-28%", "+13%"][index]}
+                    </p>
+                  </span>
+                </div>
+              )
+            )}
+          </div>
+
+          {/* Daily Overview */}
+          <div>
+            <div className="flex justify-between items-center">
+              <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
+                Daily Overview
+              </h4>
+              <button className="bg-violet-700 px-4 lg:px-5 py-2 rounded-md text-[16px] lg:text-[18px] text-white hover:bg-violet-900">
+                Export
+              </button>
+            </div>
+            <div className="flex flex-wrap justify-between mt-5 gap-3 lg:gap-5 items-center">
+              {/* Daily container 1 */}
+              <div className="w-full lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex  lg:flex-row justify-between items-center p-5 lg:p-10">
+                <div>
+                  <h4 className="text-[15px] text-gray-600 font-bold">5,461</h4>
+                  <p className="text-[13px] text-gray-500 font-medium">Today</p>
+                </div>
+                <div className="w-[100px] h-[100px]  flex justify-center gap-4 items-center">
+                  <Coinstack />
+                  <h4 className="text-center text-[14px] lg:text-[17px] text-violet-700 font-medium">
+                    Users
+                  </h4>
+                </div>
+                <div>
+                  <h4 className="text-[15px] text-gray-600 font-bold">8,085</h4>
+                  <p className="text-[13px] text-gray-500 font-medium">
+                    Expected
+                  </p>
+                </div>
+              </div>
+              {/* Daily container 2 */}
+              <div className="w-full lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex  justify-between items-center p-5 lg:p-10">
+                <div>
+                  <h4 className="text-[15px] text-gray-600 font-bold">140</h4>
+                  <p className="text-[13px] text-gray-500 font-medium">Today</p>
+                </div>
+                <div className="w-[100px] h-[100px] flex justify-center gap-4 items-center">
+                  <Circle />
+                  <h4 className="text-center text-[14px] lg:text-[17px] text-yellow-600 font-medium">
+                    Goals
+                  </h4>
+                </div>
+                <div>
+                  <h4 className="text-[15px] text-gray-600 font-bold">120</h4>
+                  <p className="text-[13px] text-gray-500 font-medium">
+                    Expected
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Session */}
-        <div className="mt-5 flex justify-between items-center gap-3">
-          <div className="bg-white rounded-md drop-shadow-md p-10">
-            <span className="bg-blue-100 rounded-md w-[70px] h-[70px] flex justify-center items-center  cursor-pointer">
-              <img
-                className="w-[25px] h-[25px]"
-                src={sessionImg1}
-                alt="Users icons"
-              />
-            </span>
-            <span className="flex flex-col gap-3 mt-2">
-              <p className="text-[20px] font-medium text-gray-500">
-                Bounce Rate
+        {/* Main 2 container */}
+        <div className="flex flex-col gap-10 lg:w-1/3">
+          <div>
+            <span className="flex justify-between items-center">
+              <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
+                Sessions By Device
+              </h4>
+              <p className="text-[16px] lg:text-[18px] font-medium text-gray-500">
+                Year
               </p>
-              <h5 className="text-[25px] font-bold ">26.3%</h5>
-              <p className="text-[15px]">-28%</p>
             </span>
+            <div className="w-full h-[320px] flex lg:flex-row justify-evenly items-center gap-5 bg-white rounded-md drop-shadow-md">
+              <span className="sm:w-[250px] lg:w-[300px] sm:h-[250px] lg:h-[250px]">
+                <Pulse />
+              </span>
+              <div className="flex flex-col gap-3">
+                {["Desktop", "Mobile", "Tablets"].map((device, index) => (
+                  <span key={index}>
+                    <p className="text-[13px] lg:text-[15px] font-medium text-gray-500">
+                      {device}
+                    </p>
+                    <span className="flex justify-center lg:justify-start">
+                      <p className="text-[12px] lg:text-[14px] font-medium text-gray-600">
+                        8,085
+                      </p>
+                      <p className="text-[10px]">
+                        {["13%", "30%", "25%"][index]}
+                      </p>
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="bg-white rounded-md drop-shadow-md p-10">
-            <span className="bg-blue-100 rounded-md w-[70px] h-[70px] flex justify-center items-center  cursor-pointer">
-              <img
-                className="w-[25px] h-[25px]"
-                src={sessionImg2}
-                alt="Users icons"
-              />
-            </span>
-            <span className="flex flex-col gap-3 mt-2">
-              <p className="text-[20px] font-medium text-gray-500">Users</p>
-              <h5 className="text-[25px] font-bold ">72.6k</h5>
-              <p className="text-[15px]">+25%</p>
-            </span>
-          </div>
-          <div className="bg-white rounded-md drop-shadow-md p-10">
-            <span className="bg-blue-100 rounded-md w-[70px] h-[70px] flex justify-center items-center  cursor-pointer">
-              <img
-                className="w-[25px] h-[25px]"
-                src={sessionImg3}
-                alt="Users icons"
-              />
-            </span>
-            <span className="flex flex-col gap-3 mt-2">
-              <p className="text-[20px] font-medium text-gray-500">Sessions</p>
-              <h5 className="text-[25px] font-bold ">26.3%</h5>
-              <p className="text-[15px]">-28%</p>
-            </span>
-          </div>
-          <div className="bg-white rounded-md drop-shadow-md p-10">
-            <span className="bg-blue-100 rounded-md w-[70px] h-[70px] flex justify-center items-center  cursor-pointer">
-              <img
-                className="w-[25px] h-[25px]"
-                src={sessionImg4}
-                alt="Users icons"
-              />
-            </span>
-            <span className="flex flex-col gap-3 mt-2">
-              <p className="text-[20px] font-medium text-gray-500">
-                Session Duration
-              </p>
-              <h5 className="text-[25px] font-bold ">2m 18s</h5>
-              <p className="text-[15px]">+13%</p>
-            </span>
-          </div>
-        </div>
-        {/* dialy Owerwiev */}
-        <div>
-          <div className="flex justify-between items-center">
-            <h4 className="text-[30px] font-medium text-gray-500">
-              Daily Overview
+          <div className="w-full h-[250px]">
+            <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
+              Sessions By Device
             </h4>
-            <button className="bg-violet-700 px-5 py-2 rounded-md text-[18px] text-white hover:bg-violet-900">
-              export
+            <span className="flex justify-between items-center mt-3">
+              <span className="flex justify-center items-center gap-2">
+                <p className="text-[15px] lg:text-[17px] font-medium text-gray-700">
+                  Channel
+                </p>
+                <p className="text-[15px] lg:text-[17px] font-medium text-gray-700">
+                  Traffic %
+                </p>
+              </span>
+              <p className="text-[15px] lg:text-[17px] font-medium text-gray-700">
+                Value
+              </p>
+            </span>
+            <iframe
+              className="mt-3 w-[100%] h-[100%]"
+              src="https://quickchart.io/chart-maker/view/zm-a209a99d-e5ac-4b11-af49-f2ba80aa6931"
+            ></iframe>
+          </div>
+
+          <div className="bg-white drop-shadow-md flex justify-between lg:justify-around items-start mt-24 p-8">
+            <div>
+              <h4 className="text-[18px] lg:text-[20px] font-medium text-gray-500">
+                Sessions By Device
+              </h4>
+              <p className="text-[13px] lg:text-[15px] font-medium text-gray-500">
+                Top Region & session
+              </p>
+            </div>
+            <button className="bg-violet-700 px-4 lg:px-5 py-2 rounded-md text-[16px] lg:text-[18px] text-white hover:bg-violet-900">
+              View
             </button>
           </div>
-          <div className="flex justify-between mt-5 items-center">
-            {/* dialy container 1 */}
-            <div className="w-[330px] h-[170px] bg-white drop-shadow-md gap-2 flex justify-between items-center">
-              <div className="p-10 drop-shadow-md rounded-md ">
-                <h4 className="text-[15px] text-gray-600 font-bold">5,461</h4>
-                <p className="text-[13px] text-gray-500 font-medium">Today</p>
-              </div>
-              <div className="w-[100px] h-[100px]">
-                <Coinstack />
-                <h4 className=" text-center text-[17px] text-violet-700 font-medium">
-                  Users
-                </h4>
-              </div>
-              <div className="p-10 drop-shadow-md rounded-md ">
-                <h4 className="text-[15px] text-gray-600 font-bold">8,085</h4>
-                <p className="text-[13px] text-gray-500 font-medium">
-                  Expected
-                </p>
-              </div>
-            </div>
-            {/* dialy container 2 */}
-            <div className="w-[330px] h-[170px] bg-white drop-shadow-md gap-2 flex justify-between items-center">
-              <div className="p-10 drop-shadow-md rounded-md ">
-                <h4 className="text-[15px] text-gray-600 font-bold">140</h4>
-                <p className="text-[13px] text-gray-500 font-medium">Today</p>
-              </div>
-              <div className="w-[100px] h-[100px]">
-                <Circle />
-                <h4 className=" text-center text-[17px] text-yellow-600 font-medium">
-                  Goals
-                </h4>
-              </div>
-              <div className="p-10 drop-shadow-md rounded-md ">
-                <h4 className="text-[15px] text-gray-600 font-bold">120</h4>
-                <p className="text-[13px] text-gray-500 font-medium">
-                  Expected
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Main 2 container */}
-      <div className="flex flex-col gap-10">
-        <div>
-          <span className="flex justify-between items-center">
-            <h4 className="text-[30px] font-medium text-gray-500">
-              Sessions By Device
-            </h4>
-            <p className="text-[18px] font-medium text-gray-500">Year</p>
-          </span>
-          <div className="w-[600px] h-[320px] flex justify-evenly items-center gap-5 bg-white rounded-md drop-shadow-md ">
-            <span className="w-[300px] h-[250px]">
-              <Pulse />
-            </span>
-            <div className="flex flex-col gap-3">
-              <span>
-                <p className="text-[15px] font-medium text-gray-500">Desctop</p>
-                <span className="flex justify-center">
-                  <p className="text-[14px] font-medium text-gray-600">8,085</p>
-                  <p className="text-[10px]">13%</p>
-                </span>
-              </span>
-              <span>
-                <p className="text-[15px] font-medium text-gray-500">Mobile</p>
-                <span className="flex">
-                  <p className="text-[14px] font-medium text-gray-600">8,085</p>
-                  <p className="text-[10px]">30%</p>
-                </span>
-              </span>
-              <span>
-                <p className="text-[15px] font-medium text-gray-500">Tablets</p>
-                <span className="flex">
-                  <p className="text-[14px] font-medium text-gray-600">8,085</p>
-                  <p className="text-[10px]">25%</p>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h4 className="text-[30px] font-medium text-gray-500">
-            Sessions By Device
-          </h4>
-          <span className="flex justify-between items-center mt-3">
-            <span className="flex justify-center items-center gap-2">
-              <p className="text-[17px] font-medium text-gray-700">Channel</p>
-              <p className="text-[17px] font-medium text-gray-700">Traffic %</p>
-            </span>
-            <p className="text-[17px] font-medium text-gray-700">Value</p>
-          </span>
-          <iframe
-            className="mt-3"
-            src="https://quickchart.io/chart-maker/view/zm-a209a99d-e5ac-4b11-af49-f2ba80aa6931"
-            frameborder="0"
-            width="100%"
-            height="300"
-          ></iframe>
-        </div>
-        {/* nne */}
-        <div className="bg-white drop-shadow-md flex justify-around items-start p-8">
-          <div>
-            <h4 className="text-[20px] font-medium text-gray-500">
-              Sessions By Device
-            </h4>
-            <p className="text-[15px] font-medium text-gray-500">
-              Top Region & session
-            </p>
-          </div>
-          <button className="bg-violet-700 px-5 py-2 rounded-md text-[18px] text-white hover:bg-violet-900">
-            Wiew
-          </button>
         </div>
       </div>
     </div>
