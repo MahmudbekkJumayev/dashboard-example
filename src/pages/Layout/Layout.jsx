@@ -9,7 +9,7 @@ const Layout = () => {
       <aside>
         <Sidebar />
       </aside>
-      <div className="flex-grow">
+      <div className="flex-grow px-2">
         <Navbar />
         <main className="snap-y px-10 overflow-y-scroll h-[calc(100vh-90px)]">
           <Outlet />

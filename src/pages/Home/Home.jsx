@@ -19,7 +19,7 @@ const Home = () => {
             <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
               Performance
             </h4>
-            <div className="w-[100%] h-[320px] bg-white rounded-md drop-shadow-md">
+            <div className="xs:w-[100%] sm:w-[100%] md:w-[100%] h-[320px] bg-white rounded-md drop-shadow-md">
               <LineChart />
             </div>
           </div>
@@ -67,12 +67,12 @@ const Home = () => {
             </div>
             <div className="flex flex-wrap justify-between mt-5 gap-3 lg:gap-5 items-center">
               {/* Daily container 1 */}
-              <div className="w-full lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex  lg:flex-row justify-between items-center p-5 lg:p-10">
+              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex lg:flex-row justify-between items-center p-5 lg:p-10">
                 <div>
                   <h4 className="text-[15px] text-gray-600 font-bold">5,461</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
                 </div>
-                <div className="w-[100px] h-[100px]  flex justify-center gap-4 items-center">
+                <div className="xs:w-[60px] xs:h-[60px] sm:w-[100px] sm:h-[100px] flex justify-center gap-4 items-center">
                   <Coinstack />
                   <h4 className="text-center text-[14px] lg:text-[17px] text-violet-700 font-medium">
                     Users
@@ -86,12 +86,12 @@ const Home = () => {
                 </div>
               </div>
               {/* Daily container 2 */}
-              <div className="w-full lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex  justify-between items-center p-5 lg:p-10">
+              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex justify-between items-center p-5 lg:p-10">
                 <div>
                   <h4 className="text-[15px] text-gray-600 font-bold">140</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
                 </div>
-                <div className="w-[100px] h-[100px] flex justify-center gap-4 items-center">
+                <div className="xs:w-[70px] xs:h-[70px] sm:w-[100px] sm:h-[100px] flex justify-center gap-4 items-center">
                   <Circle />
                   <h4 className="text-center text-[14px] lg:text-[17px] text-yellow-600 font-medium">
                     Goals
@@ -120,7 +120,7 @@ const Home = () => {
               </p>
             </span>
             <div className="w-full h-[320px] flex lg:flex-row justify-evenly items-center gap-5 bg-white rounded-md drop-shadow-md">
-              <span className="sm:w-[250px] lg:w-[300px] sm:h-[250px] lg:h-[250px]">
+              <span className="xs:w-[200px] sm:w-[250px] lg:w-[300px] xs:h-[200px] sm:h-[250px] lg:h-[250px]">
                 <Pulse />
               </span>
               <div className="flex flex-col gap-3">

@@ -6,37 +6,35 @@ import personProf from "../../assets/images/person.jpg";
 
 const Navbar = () => {
   return (
-    <div className="md:px-10 w-[100%]">
-      <div className="bg-white flex items-center px-5 justify-between py-5 drop-shadow-md flex-grow md:px-10 rounded-b-lg">
-        <div className=" xs:w-[100px] md:w-[350px] ">
-          <span className="block">
-            <label className="relative">
-              <IoSearchSharp
-                color="gray"
-                className="top-[-15px] xs:w-1 xs:h-1 w-7 h-7 left-2  absolute z-10"
-              />
-              <input
-                className="bg-gradient-to-r outline-0 top-[-20px] text-gray  text-[17px] xs:py-5  sm:px-10 py-10 sm:py-2 text-base sm:text-[15px] md:py-3 absolute from-slate-200 rounded-md h-[30px] xs:h-[20px] sm:w-[200px] to-slate-200"
-                type="text"
-                placeholder="Search"
-              />
-            </label>
-          </span>
+    <div className="w-full">
+      <div className="bg-white flex items-center justify-between py-5 px-5 md:px-10 drop-shadow-md rounded-b-lg">
+        <div className="w-full md:w-[350px]">
+          <label className="relative block">
+            <IoSearchSharp
+              color="gray"
+              className="absolute top-1/2 transform -translate-y-1/2 left-3 w-5 h-5 md:w-7 md:h-7"
+            />
+            <input
+              className="w-full bg-gradient-to-r from-slate-200 to-slate-200 rounded-md pl-10 pr-4 py-2 outline-none text-gray-700 text-sm md:text-base"
+              type="text"
+              placeholder="Search"
+            />
+          </label>
         </div>
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex items-center gap-4 md:gap-5">
           <RiMessage2Line
             color="gray"
-            className="w-[30px] h-[25px] cursor-pointer"
+            className="w-5 h-5 md:w-6 md:h-6 cursor-pointer"
           />
           <IoNotifications
             color="gray"
-            className="w-[30px] h-[25px] cursor-pointer"
+            className="w-5 h-5 md:w-6 md:h-6 cursor-pointer"
           />
-          <span className="w-[40px] h-[40px] rounded-full cursor-pointer">
+          <span className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden cursor-pointer">
             <img
-              className="w-[40px] h-[40px] rounded-full object-cover"
+              className="w-full h-full object-cover"
               src={personProf}
-              alt="Profil img"
+              alt="Profile"
             />
           </span>
         </div>

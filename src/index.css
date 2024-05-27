@@ -6,3 +6,8 @@ body {
   background-color: aliceblue;
   /* overflow: hidden; */
 }
+
+.doughnut-container {
+  width: 70px;
+  height: 70px;
+}
