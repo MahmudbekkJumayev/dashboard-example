@@ -48,7 +48,7 @@ const Pulse = () => {
       },
       title: {
         display: true,
-        text: "Doughnut Chart Example",
+        text: "",
       },
     },
   };

@@ -15,7 +15,7 @@ const Navbar = () => {
               className="absolute top-1/2 transform -translate-y-1/2 left-3 w-5 h-5 md:w-7 md:h-7"
             />
             <input
-              className="w-full bg-gradient-to-r from-slate-200 to-slate-200 rounded-md pl-10 pr-4 py-2 outline-none text-gray-700 text-sm md:text-base"
+              className="w-[90%] bg-gradient-to-r from-slate-200 to-slate-200 rounded-md pl-10 pr-4 py-2 outline-none text-gray-700 text-sm md:text-base"
               type="text"
               placeholder="Search"
             />

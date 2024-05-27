@@ -19,7 +19,7 @@ const Home = () => {
             <h4 className="text-[24px] lg:text-[30px] font-medium text-gray-500">
               Performance
             </h4>
-            <div className="xs:w-[100%] sm:w-[100%] md:w-[100%] h-[320px] bg-white rounded-md drop-shadow-md">
+            <div className="xs:w-[100%] sm:w-[100%] md:w-[100%] xs:h-[250px] md:h-[320px] lg:w-full bg-white rounded-md drop-shadow-md">
               <LineChart />
             </div>
           </div>
@@ -30,7 +30,7 @@ const Home = () => {
               (img, index) => (
                 <div
                   key={index}
-                  className="w-full sm:w-1/2 lg:w-[24%] bg-white rounded-md drop-shadow-md p-5 lg:p-10 flex flex-col items-center"
+                  className="w-full  sm:w-[100%] md:w-[80%] lg:w-[100%] bg-white rounded-md drop-shadow-md p-5 lg:p-10 flex flex-col items-center"
                 >
                   <span className="bg-blue-100 rounded-md w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] flex justify-center items-center cursor-pointer">
                     <img
@@ -65,9 +65,9 @@ const Home = () => {
                 Export
               </button>
             </div>
-            <div className="flex flex-wrap justify-between mt-5 gap-3 lg:gap-5 items-center">
+            <div className="flex xs:flex-col sm:flex justify-center mt-5 gap-3 lg:gap-5 items-center">
               {/* Daily container 1 */}
-              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex lg:flex-row justify-between items-center p-5 lg:p-10">
+              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white rounded-md drop-shadow-md gap-2 flex lg:flex-row justify-between items-center p-5 lg:p-10">
                 <div>
                   <h4 className="text-[15px] text-gray-600 font-bold">5,461</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
@@ -86,7 +86,7 @@ const Home = () => {
                 </div>
               </div>
               {/* Daily container 2 */}
-              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white drop-shadow-md gap-2 flex justify-between items-center p-5 lg:p-10">
+              <div className="xs:w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white rounded-md drop-shadow-md gap-2 flex justify-between items-center p-5 lg:p-10">
                 <div>
                   <h4 className="text-[15px] text-gray-600 font-bold">140</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
@@ -119,18 +119,18 @@ const Home = () => {
                 Year
               </p>
             </span>
-            <div className=" h-[320px] flex xs:flex-col lg:flex-row justify-center items-center gap-5 bg-white rounded-md drop-shadow-md">
-              <span className="xs:w-[200px] sm:w-[250px] lg:w-[300px] xs:h-[200px] sm:h-[250px] lg:h-[250px]">
+            <div className=" h-[320px] p-3 flex xs:flex-col sm:flex-row justify-center items-center bg-white rounded-md drop-shadow-md">
+              <span className="xs:w-[100px] sm:w-[250px] lg:w-[250px]  xs:h-[100px] sm:h-[250px] lg:h-[250px]">
                 <Pulse />
               </span>
-              <div className="flex flex-col gap-3">
+              <div className="flex md:flex-col justify-evenly items-center gap-3">
                 {["Desktop", "Mobile", "Tablets"].map((device, index) => (
                   <span key={index}>
-                    <p className="text-[13px] lg:text-[15px] font-medium text-gray-500">
+                    <p className="xs:text-[15px] lg:text-[15px] font-medium text-gray-500">
                       {device}
                     </p>
-                    <span className="flex justify-center lg:justify-start">
-                      <p className="text-[12px] lg:text-[14px] font-medium text-gray-600">
+                    <span className="flex xs:justify-center md:justify-around gap-2 lg:justify-start">
+                      <p className="text-[12px] lg:text-[14px] font-medium text-gray-700">
                         8,085
                       </p>
                       <p className="text-[10px]">
@@ -159,10 +159,12 @@ const Home = () => {
                 Value
               </p>
             </span>
-            <iframe
-              className="mt-3 w-[100%] h-[100%]"
-              src="https://quickchart.io/chart-maker/view/zm-a209a99d-e5ac-4b11-af49-f2ba80aa6931"
-            ></iframe>
+            <div className="w-[100%] h-[185px]">
+              <iframe
+                className="mt-3 w-[100%] h-[100%]"
+                src="https://quickchart.io/chart-maker/view/zm-a209a99d-e5ac-4b11-af49-f2ba80aa6931"
+              ></iframe>
+            </div>
           </div>
 
           <div className="bg-white drop-shadow-md flex justify-between lg:justify-around items-start mt-24 p-8">

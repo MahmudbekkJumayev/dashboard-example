@@ -4,7 +4,6 @@
 
 body {
   background-color: aliceblue;
-  /* overflow: hidden; */
 }
 
 .doughnut-container {
@@ -12,12 +11,15 @@ body {
   height: 70px;
 }
 
-/* index.css */
-/* 
+#chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .chart-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
   height: 100%;
   margin: auto;
 }
@@ -26,34 +28,17 @@ canvas {
   display: block;
   width: 100%;
   height: auto;
-} */
-
-/* index.css */
-
-.chart-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px; /* Maksimal kenglikni kerakli qiymatga o'zgartiring */
-  height: auto;
-  margin: auto;
 }
 
-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Responsiv dizayn uchun media queries qo'shamiz */
 @media (max-width: 768px) {
   .chart-container {
-    max-width: 90%; /* Tabletlar uchun maksimal kenglikni to'liq qilish */
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .chart-container {
-    max-width: 100%; /* Mobil telefonlar uchun maksimal kenglikni to'liq qilish */
-    padding: 0 10px; /* Chekka joylarni to'ldirish uchun padding qo'shamiz */
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
