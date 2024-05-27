@@ -40,16 +40,8 @@ const Coinstack = () => {
   };
 
   return (
-    <div className="w-[100%] h-[] flex justify-evenly items-center">
-      {/* //   <div className="p-10 drop-shadow-md bg-white">
-    //     <h4 className="text-[40px] text-gray-600 font-bold">5,461</h4>
-    //     <p className="text-[30px] text-gray-500 font-medium">Today</p>
-    //   </div> */}
+    <div className="w-[100%] h-[100px] flex justify-evenly items-center">
       <Doughnut data={data} options={options} />
-      {/* <div className="p-10 drop-shadow-md bg-white">
-        <h4 className="text-[40px] text-gray-600 font-bold">8,085</h4>
-        <p className="text-[30px] text-gray-500 font-medium">Expected</p>
-      </div> */}
     </div>
   );
 };

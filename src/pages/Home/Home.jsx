@@ -10,7 +10,7 @@ import Circle from "../Circle/Circle";
 
 const Home = () => {
   return (
-    <div className="container w-[90%] mx-auto mb-[30px] xs:p-2 sm:p-4 lg:p-0">
+    <div className="container w-[90%] sm:w-[100%] mx-auto mb-[30px] xs:p-2 sm:p-4 lg:p-0">
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Main 1 container */}
         <div className="flex flex-col gap-10 lg:w-2/3">
@@ -40,7 +40,7 @@ const Home = () => {
                   </span>
                   <span className="flex flex-col gap-3 mt-2 items-center">
                     <p className="text-[16px] lg:text-[20px] font-medium text-gray-500">
-                      {["Bounce Rate", "Users", "Sessions", "Duration"][index]}
+                      {["Bounce", "Users", "Sessions", "Duration"][index]}
                     </p>
                     <h5 className="text-[20px] lg:text-[25px] font-bold">
                       {["26.3%", "72.6k", "26.3%", "2m 18s"][index]}
@@ -64,14 +64,14 @@ const Home = () => {
                 Export
               </button>
             </div>
-            <div className="flex flex-col sm:flex justify-center mt-5 gap-3 lg:gap-5 items-center">
+            <div className="flex flex-col md:flex-row sm:flex-grow justify-center mt-5 gap-3 lg:gap-5 items-center">
               {/* Daily container 1 */}
               <div className="w-[100%] sm:w-[300px] lg:w-[430px] h-[170px] bg-white rounded-md drop-shadow-md gap-2 flex lg:flex-row justify-between items-center p-5 lg:p-10">
                 <div>
                   <h4 className="text-[15px] text-gray-600 font-bold">5,461</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
                 </div>
-                <div className="w-[100px] h-[100px] sm:w-[100px] sm:h-[100px] flex justify-center gap-4 items-center">
+                <div className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] flex justify-center gap-4 items-center">
                   <Coinstack />
                   <h4 className="text-center text-[14px] lg:text-[17px] text-violet-700 font-medium">
                     Users
@@ -90,7 +90,7 @@ const Home = () => {
                   <h4 className="text-[15px] text-gray-600 font-bold">140</h4>
                   <p className="text-[13px] text-gray-500 font-medium">Today</p>
                 </div>
-                <div className="w-[100px] h-[100px] sm:w-[100px] sm:h-[100px] flex justify-center gap-4 items-center">
+                <div className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px]  flex justify-center gap-4 items-center">
                   <Circle />
                   <h4 className="text-center text-[14px] lg:text-[17px] text-yellow-600 font-medium">
                     Goals
