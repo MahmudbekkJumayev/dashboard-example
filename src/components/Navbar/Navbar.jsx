@@ -6,17 +6,17 @@ import personProf from "../../assets/images/person.jpg";
 
 const Navbar = () => {
   return (
-    <div className="px-10 w-[100%]">
-      <div className="bg-white flex items-center justify-between py-5 drop-shadow-md flex-grow md:px-10">
-        <div className="w-[350px] ">
+    <div className="md:px-10 w-[100%]">
+      <div className="bg-white flex items-center px-5 justify-between py-5 drop-shadow-md flex-grow md:px-10 rounded-b-lg">
+        <div className=" xs:w-[100px] md:w-[350px] ">
           <span className="block">
             <label className="relative">
               <IoSearchSharp
                 color="gray"
-                className="top-[-15px] w-7 h-7 left-2  absolute z-10"
+                className="top-[-15px] xs:w-1 xs:h-1 w-7 h-7 left-2  absolute z-10"
               />
               <input
-                className="bg-gradient-to-r outline-0 top-[-20px] text-gray  text-[17px]  sm:px-10 py-10 sm:py-2 text-base sm:text-[15px] md:py-3 absolute from-slate-200 rounded-md h-[30px] sm:w-[300px] to-slate-200"
+                className="bg-gradient-to-r outline-0 top-[-20px] text-gray  text-[17px] xs:py-5  sm:px-10 py-10 sm:py-2 text-base sm:text-[15px] md:py-3 absolute from-slate-200 rounded-md h-[30px] xs:h-[20px] sm:w-[200px] to-slate-200"
                 type="text"
                 placeholder="Search"
               />

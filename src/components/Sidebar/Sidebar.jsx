@@ -71,7 +71,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white drop-shadow-md h-[100vh] rounded-r-lg ${
+      className={`bg-white drop-shadow-md hidden md:block h-[100vh] rounded-r-lg ${
         isExpanded ? "w-[200px]" : "w-[80px]"
       }`}
     >
