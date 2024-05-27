@@ -25,7 +25,7 @@ const Home = () => {
           </div>
 
           {/* Session */}
-          <div className="mt-5 flex  sm:grid-cols-2 justify-between items-center gap-3">
+          <div className="mt-5 grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-between items-center gap-3">
             {[sessionImg1, sessionImg2, sessionImg3, sessionImg4].map(
               (img, index) => (
                 <div
@@ -119,7 +119,7 @@ const Home = () => {
                 Year
               </p>
             </span>
-            <div className="w-full h-[320px] flex lg:flex-row justify-evenly items-center gap-5 bg-white rounded-md drop-shadow-md">
+            <div className=" h-[320px] flex xs:flex-col lg:flex-row justify-center items-center gap-5 bg-white rounded-md drop-shadow-md">
               <span className="xs:w-[200px] sm:w-[250px] lg:w-[300px] xs:h-[200px] sm:h-[250px] lg:h-[250px]">
                 <Pulse />
               </span>

@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+// Global CSS faylini import qilish
 
 ChartJS.register(
   CategoryScale,
@@ -37,6 +38,8 @@ const LineChart = () => {
   };
 
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     animations: {
       tension: {
         duration: 1000,
@@ -62,7 +65,11 @@ const LineChart = () => {
     },
   };
 
-  return <Line data={data} options={options} />;
+  return (
+    <div className="chart-container">
+      <Line data={data} options={options} />
+    </div>
+  );
 };
 
 export default LineChart;
