@@ -73,7 +73,7 @@ const Sidebar = () => {
     <div
       className={`bg-white drop-shadow-md hidden md:block h-[100vh] rounded-r-lg ${
         isExpanded ? "w-[200px]" : "w-[80px]"
-      }`}
+      } transition-all duration-300`}
     >
       <div className="h-screen flex justify-center">
         <div className="flex flex-col items-center">
@@ -88,7 +88,7 @@ const Sidebar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`w-full rounded-lg flex items-center cursor-pointer py-4 px-4 ${
+                className={`w-full rounded-lg flex items-center cursor-pointer py-4 px-4 transition-colors duration-300 ${
                   location.pathname === link.to
                     ? "text-white bg-violet-500"
                     : "text-gray-500 hover:text-white hover:bg-violet-500"

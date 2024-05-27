@@ -101,7 +101,7 @@ const Navbar = () => {
           className={`bg-white drop-shadow-md fixed z-10 h-[100vh] rounded-r-lg transition-transform duration-300 ${
             isExpanded
               ? "w-[200px] translate-x-0"
-              : "w-[70px] -translate-x-full"
+              : "w-[80px] -translate-x-full"
           }`}
         >
           <div className="h-screen flex justify-center">
