@@ -71,8 +71,8 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-white drop-shadow-md fixed z-20 rounded-r-lg ${
-        isExpanded ? "w-[250px]" : "w-[80px]"
+      className={`bg-white drop-shadow-md h-[100vh] rounded-r-lg ${
+        isExpanded ? "w-[200px]" : "w-[80px]"
       }`}
     >
       <div className="h-screen flex justify-center">

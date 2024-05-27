@@ -5,13 +5,13 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 
 const Layout = () => {
   return (
-    <div className="flex gap-10">
+    <div className="flex">
       <aside>
         <Sidebar />
       </aside>
       <div className="flex-grow">
         <Navbar />
-        <main className="snap-y md:ml-[70px] lg:ml-[70px] px-10">
+        <main className="snap-y px-10 overflow-y-scroll h-[calc(100vh-90px)]">
           <Outlet />
         </main>
       </div>

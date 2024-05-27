@@ -10,7 +10,7 @@ import Circle from "../Circle/Circle";
 
 const Home = () => {
   return (
-    <div className="container mx-auto  mt-[80px]  mb-[30px] p-4 lg:p-0">
+    <div className="container mx-auto mb-[30px] p-4 lg:p-0">
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Main 1 container */}
         <div className="flex flex-col gap-10 lg:w-2/3">
